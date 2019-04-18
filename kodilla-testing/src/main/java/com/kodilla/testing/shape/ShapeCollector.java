@@ -6,22 +6,17 @@ import java.util.List;
 public class ShapeCollector {
     private List<Shape> shapeList= new ArrayList<>();
 
-    public List<Shape> getShapeList() {
-        return shapeList;
-    }
-
     public void addFigure(Shape shape){
-        // do nothing
+        shapeList.add(shape);
     }
     public void removeFigure(Shape shape){
-        // do nothing
+        shapeList.remove(shape);
     }
     public Shape getFigure(int n){
-        // returning null means that the operation was unsuccessful
-        return null;
+        return shapeList.get(n);
     }
-    public void showFigures(){
-        // do nothing
+    public List<Shape> showFigures(){
+        return shapeList;
     }
 
 }

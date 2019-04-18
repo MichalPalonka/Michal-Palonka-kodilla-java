@@ -28,28 +28,28 @@ public class ShapeCollectorTestSuite {
     public void testAddFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Square();
+        Shape shape = new Triangle(5, 5);
         //When
         shapeCollector.addFigure(shape);
         //Then
-        Assert.assertEquals(1, shapeCollector.getShapeList());
+        Assert.assertEquals(1, shapeCollector.showFigures().size());
     }
     @Test
     public void testRemoveFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Square();
+        Shape shape = new Square(5);
         shapeCollector.addFigure(shape);
         //When
         shapeCollector.removeFigure(shape);
         //Then
-        Assert.assertEquals(0, shapeCollector.getShapeList());
+        Assert.assertEquals(0, shapeCollector.showFigures().size());
     }
     @Test
     public void testGetFigure() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Square();
+        Shape shape = new Circle(5);
         shapeCollector.addFigure(shape);
         //When
         Shape tempShape = shapeCollector.getFigure(0);
@@ -61,13 +61,13 @@ public class ShapeCollectorTestSuite {
     public void testShowFigures() {
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape shape = new Square();
+        Shape shape = new Square(5);
         shapeCollector.addFigure(shape);
         List<Shape> shapeList = new ArrayList<>();
         shapeList.add(shape);
         //When
-        List<Shape> tempShapeList = shapeCollector.getShapeList();
+        List<Shape> tempShapeList = shapeCollector.showFigures();
         //Then
-        Assert.assertEquals(shapeList.toString(),tempShapeList.toString());
+        Assert.assertEquals(shapeList.toString(), tempShapeList.toString());
     }
 }

@@ -2,8 +2,11 @@ package com.kodilla.testing.shape;
 
 public class Circle implements Shape {
     private String name = "Circle";
-    private double a;
-    private double field = a*a*3.14;
+    private double r;
+
+    public Circle(double r) {
+        this.r = r;
+    }
 
     @Override
     public String getShapeName() {
@@ -12,6 +15,6 @@ public class Circle implements Shape {
 
     @Override
     public double getField() {
-        return field;
+        return r*r*3.14;
     }
 }

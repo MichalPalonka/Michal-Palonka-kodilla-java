@@ -4,7 +4,11 @@ public class Triangle implements Shape {
     private String name = "Triangle";
     private double a;
     private double h;
-    private double field = (a*h)/2;
+
+    public Triangle(double a, double h) {
+        this.a = a;
+        this.h = h;
+    }
 
     @Override
     public String getShapeName() {
@@ -13,6 +17,6 @@ public class Triangle implements Shape {
 
     @Override
     public double getField() {
-        return field;
+        return (a*h)/2;
     }
 }
