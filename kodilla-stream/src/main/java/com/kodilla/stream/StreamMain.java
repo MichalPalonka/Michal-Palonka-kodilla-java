@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamMain {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Forum theForum = new Forum();
         Map<Integer, ForumUser> mapForumUsers = theForum.getList().stream()
                 .filter(user -> user.getSex() == 'M')
