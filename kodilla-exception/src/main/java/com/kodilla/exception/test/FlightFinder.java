@@ -21,7 +21,7 @@ public class FlightFinder {
                 throw new RouteNotFoundException("Airplane can't flight to the same Town.");
             }
             if(Boolean.TRUE.equals(airports.get(flight.getArrivalAirport()))) {
-                System.out.println("Your flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + "exsist.");
+                System.out.println("Your flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + " exsist.");
             }else{
                 throw new RouteNotFoundException("Air plane can't land is this town.");
             }
