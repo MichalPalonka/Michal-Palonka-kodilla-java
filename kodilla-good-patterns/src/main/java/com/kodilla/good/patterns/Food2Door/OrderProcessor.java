@@ -1,7 +1,7 @@
 package com.kodilla.good.patterns.Food2Door;
 
 public class OrderProcessor {
-    OrderRequest orderRequest;
+    private OrderRequest orderRequest;
 
     public OrderProcessor(OrderRequest orderRequest) {
         this.orderRequest = orderRequest;

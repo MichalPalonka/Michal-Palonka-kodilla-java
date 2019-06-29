@@ -6,33 +6,18 @@ public class ProductOrderProcessor {
     private OrderRepository orderRepository;
 
     public ProductOrderProcessor(final InformationService informationService,
-                           final OrderService orderService,
-                           final OrderRepository orderRepository) {
+                                 final OrderService orderService,
+                                 final OrderRepository orderRepository) {
         this.informationService = informationService;
         this.orderService = orderService;
         this.orderRepository = orderRepository;
     }
 
-    public OrderDto process(final OrderRequest orderRequest) {
-        boolean isSold = orderService.sold(orderRequest.getUser(),
-                orderRequest.getOrderDate(),
-                orderRequest.getProduct(),
-                orderRequest.getQuantity());
-        if(isSold) {
-            informationService.inform(orderRequest.getUser());
-            orderRepository.createOrder(orderRequest.getUser(),
-                    orderRequest.getOrderDate(),
-                    orderRequest.getProduct(),
-                    orderRequest.getQuantity());
-            return new OrderDto(orderRequest.getUser(),
-                    orderRequest.getOrderDate(),
-                    orderRequest.getProduct(),
-                    orderRequest.getQuantity(), true);
-        } else {
-            return new OrderDto(orderRequest.getUser(),
-                    orderRequest.getOrderDate(),
-                    orderRequest.getProduct(),
-                    orderRequest.getQuantity(), false);
+    public void process(final OrderRequest orderRequest) {
+        if(!orderRequest.getProduct().getName().isEmpty() || !orderRequest.getUser().getName().isEmpty() || orderRequest.getQuantity() == 0) {
+            orderService.toDo(orderRequest);
+            orderRepository.save(orderRequest);
+            informationService.send(orderRequest);
         }
     }
 }

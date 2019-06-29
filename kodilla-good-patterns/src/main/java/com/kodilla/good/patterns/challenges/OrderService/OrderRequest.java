@@ -1,28 +1,19 @@
 package com.kodilla.good.patterns.challenges.OrderService;
 
-import java.time.LocalDateTime;
 
 public class OrderRequest {
     private User user;
-    private LocalDateTime orderDate;
     private Product product;
     private int quantity;
-    private boolean isSold;
 
-    public OrderRequest(User user, LocalDateTime orderDate, Product product, int quantity, final boolean isSold) {
+    public OrderRequest(User user, Product product, int quantity) {
         this.user = user;
-        this.orderDate = orderDate;
         this.product = product;
         this.quantity = quantity;
-        this.isSold = isSold;
     }
 
     public User getUser() {
         return user;
-    }
-
-    public LocalDateTime getOrderDate() {
-        return orderDate;
     }
 
     public Product getProduct() {
@@ -32,7 +23,5 @@ public class OrderRequest {
     public int getQuantity() {
         return quantity;
     }
-    public boolean getIsSold() {
-        return isSold;
-    }
+
 }

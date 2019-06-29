@@ -1,5 +1,5 @@
 package com.kodilla.good.patterns.challenges.OrderService;
 
-interface InformationService {
-    void inform(User user);
+public interface InformationService {
+    boolean send(OrderRequest orderRequest);
 }
