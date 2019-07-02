@@ -8,7 +8,7 @@ public class Food2DoorProcessor {
         OrderProcessor orderProcessor = new OrderProcessor(orderRequest);
 
         if(orderProcessor.process()) {
-            System.out.println("Order accepted.");
+            System.out.println("Order accepted. ");
         } else {
             System.out.println("Order not accepted.");
         }
