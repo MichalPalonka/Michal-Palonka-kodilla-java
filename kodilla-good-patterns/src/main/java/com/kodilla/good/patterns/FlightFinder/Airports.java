@@ -3,7 +3,7 @@ package com.kodilla.good.patterns.FlightFinder;
 import java.util.*;
 
 public class Airports {
-    private ArrayList<Airport> airports = new ArrayList<>();
+    private List<Airport> airports = new ArrayList<>();
 
     public Airports(){
         Airport warsaw = new Airport("warsaw");
@@ -38,7 +38,7 @@ public class Airports {
         airports.add(nyc);
     }
 
-    public ArrayList<Airport> getAirports() {
+    public List<Airport> getAirports() {
         return airports;
     }
 }
