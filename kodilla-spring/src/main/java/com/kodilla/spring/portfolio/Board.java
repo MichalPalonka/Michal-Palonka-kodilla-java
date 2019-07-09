@@ -11,13 +11,13 @@ public class Board {
         this.doneList = doneList;
     }
 
-    TaskList toDoList (){
+    public TaskList toDoList (){
         return toDoList;
     }
-    TaskList inProgressList(){
+    public TaskList inProgressList(){
         return inProgressList;
     }
-    TaskList doneList(){
+    public TaskList doneList(){
         return doneList;
     }
 
