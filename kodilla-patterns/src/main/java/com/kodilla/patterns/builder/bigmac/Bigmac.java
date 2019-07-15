@@ -35,7 +35,11 @@ public class Bigmac {
         }
 
         public Bigmac build() {
-            return new Bigmac(bun, burgers, sauce, ingredients);
+            if (bun == null || burgers == 0) {
+                throw new IllegalArgumentException("Error, can't make Bigmac w/o bun, burgers");
+            } else {
+                return new Bigmac(bun, burgers, sauce, ingredients);
+            }
         }
     }
 
