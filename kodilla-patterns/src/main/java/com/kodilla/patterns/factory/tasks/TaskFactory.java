@@ -14,7 +14,7 @@ public class TaskFactory {
             case PAINTING:
                 return new PaintingTask("Painting", "Blue", "Room");
             default:
-                return null;
+                throw new IllegalArgumentException();
         }
     }
 }
