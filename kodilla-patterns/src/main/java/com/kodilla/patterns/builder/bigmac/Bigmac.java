@@ -15,14 +15,9 @@ public class Bigmac {
         private String sauce;
         private List<String> ingredients = new ArrayList<>();
 
-        public BigmacBuilder bun(String bun) {
+        public BigmacBuilder(String bun, int burgers) {
             this.bun = bun;
-            return this;
-        }
-
-        public BigmacBuilder burgers(int burgers){
             this.burgers = burgers;
-            return this;
         }
 
         public BigmacBuilder sauce(String sauce){
@@ -35,11 +30,7 @@ public class Bigmac {
         }
 
         public Bigmac build() {
-            if (bun == null || burgers == 0) {
-                throw new IllegalArgumentException("Error, can't make Bigmac w/o bun, burgers");
-            } else {
                 return new Bigmac(bun, burgers, sauce, ingredients);
-            }
         }
     }
 
