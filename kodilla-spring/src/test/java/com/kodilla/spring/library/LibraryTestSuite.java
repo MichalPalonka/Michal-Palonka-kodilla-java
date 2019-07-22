@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.Arrays;
 
 public class LibraryTestSuite {
+    /*
     @Test
     public void testLoadFromDb() {
         //Given
@@ -43,4 +44,5 @@ public class LibraryTestSuite {
                 .forEach(System.out::println);
         System.out.println("<< ===== Beans list ====");
     }
+    */
 }
