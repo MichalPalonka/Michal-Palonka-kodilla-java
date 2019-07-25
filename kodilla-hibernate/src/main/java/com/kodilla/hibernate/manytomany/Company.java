@@ -5,6 +5,11 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "Company.findCompanyWithNameStartWith",
+        query = "SELECT * FROM COMPANIES WHERE NAME LIKE CONCAT('%', :SHORTNAME , '%')",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -29,7 +34,7 @@ public class Company {
     }
 
     @NotNull
-    @Column(name = "Name")
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
