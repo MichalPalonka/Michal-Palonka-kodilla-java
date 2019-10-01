@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
-        name = "Company.findCompanyWithNameStartWith",
+        name = "Company.retrieveCompanyNameLike",
         query = "SELECT * FROM COMPANIES WHERE NAME LIKE CONCAT('%', :SHORTNAME , '%')",
         resultClass = Company.class
 )
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

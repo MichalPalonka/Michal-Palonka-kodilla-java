@@ -13,5 +13,5 @@ import java.util.List;
 @Repository
 public interface CompanyDao extends CrudRepository<Company, Integer> {
     @Query(nativeQuery = true)
-    List<Company> findCompanyWithNameStartWith(@Param("SHORTNAME") String shortname);
+    List<Company> retrieveCompanyNameLike(@Param("SHORTNAME") String shortname);
 }
