@@ -19,10 +19,10 @@ public final class Facade {
     private EmployeeDao employeeDao;
 
     public List<Company> retrieveCompanyLike(String nameFragment) {
-        return companyDao.retrieveCompanyNameLike(nameFragment);
+        return companyDao.retrieveCompanyNameLike("%" + nameFragment + "%");
     }
 
     public List<Employee> retrieveEmployeeLike(String nameFragment){
-        return employeeDao.retrieveEmployeeLike(nameFragment);
+        return employeeDao.retrieveEmployeeLike("%" + nameFragment + "%");
     }
 }

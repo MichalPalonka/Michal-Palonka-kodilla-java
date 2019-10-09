@@ -55,8 +55,8 @@ public class FacadeTestSuite {
         int greyMatterId = greyMatter.getId();
 
         //When
-        List<Employee> employeNameLike = facade.retrieveEmployeeLike("Smith");
-        List<Company> companyNameLike = facade.retrieveCompanyLike("Sof");
+        List<Employee> employeNameLike = facade.retrieveEmployeeLike("mith");
+        List<Company> companyNameLike = facade.retrieveCompanyLike("oftwar");
 
         //Then
         Assert.assertEquals(1, employeNameLike.size());
