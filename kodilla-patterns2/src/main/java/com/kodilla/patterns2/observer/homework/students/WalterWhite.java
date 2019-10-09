@@ -1,4 +1,4 @@
-package com.kodilla.patterns2.observer.homework.Students;
+package com.kodilla.patterns2.observer.homework.students;
 
 import com.kodilla.patterns2.observer.homework.Homework;
 

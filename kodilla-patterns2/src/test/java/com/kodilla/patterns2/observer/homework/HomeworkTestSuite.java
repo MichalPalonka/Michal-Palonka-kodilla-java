@@ -1,8 +1,8 @@
 package com.kodilla.patterns2.observer.homework;
 
-import com.kodilla.patterns2.observer.homework.Students.JessiePinkman;
-import com.kodilla.patterns2.observer.homework.Students.SaoulGoodman;
-import com.kodilla.patterns2.observer.homework.Students.WalterWhite;
+import com.kodilla.patterns2.observer.homework.students.JessiePinkman;
+import com.kodilla.patterns2.observer.homework.students.SaoulGoodman;
+import com.kodilla.patterns2.observer.homework.students.WalterWhite;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
