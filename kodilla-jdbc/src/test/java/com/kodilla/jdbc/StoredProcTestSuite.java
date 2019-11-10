@@ -12,9 +12,9 @@ public class StoredProcTestSuite {
     @Test
     public void testUpdateVipLevels() throws SQLException {
         //Given
-        DbManager dbManager = DbManager.getInstance();
+        DbManagerLibrary dbManagerLibrary = DbManagerLibrary.getInstance();
         String sqlUpdate = "UPDATE readers SET vip_level=\"Not set\"";
-        Statement statement = dbManager.getConnection().createStatement();
+        Statement statement = dbManagerLibrary.getConnection().createStatement();
         statement.executeUpdate(sqlUpdate);
 
         //When
@@ -34,9 +34,9 @@ public class StoredProcTestSuite {
     @Test
     public void testUpdateBestsellers() throws SQLException {
         //Given
-        DbManager dbManager = DbManager.getInstance();
+        DbManagerLibrary dbManagerLibrary = DbManagerLibrary.getInstance();
         String sqlUpdate = "UPDATE books SET BESTSELLER=NULL";
-        Statement statement = dbManager.getConnection().createStatement();
+        Statement statement = dbManagerLibrary.getConnection().createStatement();
         statement.executeUpdate(sqlUpdate);
 
         //When
