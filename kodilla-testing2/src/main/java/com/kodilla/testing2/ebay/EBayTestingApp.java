@@ -1,4 +1,4 @@
-package com.kodilla.testing2.google;
+package com.kodilla.testing2.ebay;
 
 import com.kodilla.testing2.config.WebDriverConfig;
 import org.openqa.selenium.By;
